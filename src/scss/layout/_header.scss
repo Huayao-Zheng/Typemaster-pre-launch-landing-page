@@ -1,0 +1,23 @@
+@use '../base' as *;
+@use '../components/button' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(23) rem(24) rem(64) rem(24);
+  margin: 0 auto;
+
+  @include breakpoint-up(medium) {
+    padding: rem(40) rem(40) rem(62) rem(40);
+  }
+
+  @include breakpoint-up(large) {
+    padding: rem(55) rem(165) rem(76) rem(165);
+  }
+
+  &__cta {
+    @include ctaButton();
+    @include ctaButton-hover();
+  }
+}

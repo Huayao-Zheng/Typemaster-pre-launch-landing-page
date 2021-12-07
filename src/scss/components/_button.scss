@@ -1,0 +1,20 @@
+@use '../base' as *;
+
+@mixin ctaButton($color: $darkblue, $bg-color: $lightgray, $p-tb: rem(11px), $p-lr: rem(14px), $radius: rem(8px)) {
+  color: $color;
+  background: $bg-color;
+  padding: $p-tb $p-lr;
+  border-radius: $radius;
+  font-size: rem(16px);
+  font-weight: bold;
+  line-height: rem(26px);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+@mixin ctaButton-hover($color: #fff, $bg-color: $darkblue) {
+  &:hover {
+    color: $color;
+    background: $bg-color;
+  }
+}
