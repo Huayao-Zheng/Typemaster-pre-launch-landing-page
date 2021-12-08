@@ -2,17 +2,17 @@
 @use '../components/button' as *;
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: rem(23px) 0 rem(64px) 0;
+  padding-top: rem(23px);
+  padding-bottom: rem(64px);
 
   @include breakpoint-up(medium) {
-    padding: rem(40px) 0 rem(62px) 0;
+    padding-top: rem(40px);
+    padding-bottom: rem(62px);
   }
 
   @include breakpoint-up(large) {
-    padding: rem(55px) 0 rem(76px) 0;
+    padding-top: rem(55px);
+    padding-bottom: rem(83px);
   }
 
   &__cta--gray {

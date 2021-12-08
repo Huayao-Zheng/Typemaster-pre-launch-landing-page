@@ -3,18 +3,25 @@
 @use '../components/square' as *;
 
 .hero {
-  display: grid;
-  gap: rem(64px);
-  grid-template-columns: rem(339px);
+  margin-bottom: rem(30px);
+
   @include breakpoint-up(medium) {
-    grid-template-columns: rem(339px) 1fr;
-    gap: rem(69px);
+    display: flex;
+    justify-content: space-between;
   }
 
   .left-col {
-    padding-top: rem(60px);
-  }
-  .right-col {
+    margin-bottom: rem(61px);
+
+    @include breakpoint-up(medium) {
+      padding-top: rem(60);
+      min-width: rem(339px);
+      margin: 0 rem(69px) 0 0;
+    }
+
+    @include breakpoint-up(large) {
+      max-width: rem(445px);
+    }
   }
 
   h1 {
@@ -23,8 +30,15 @@
     font-size: rem(48px);
     line-height: rem(48px);
     margin-bottom: rem(32px);
+
     @include breakpoint-up(medium) {
       margin-bottom: rem(34px);
+    }
+
+    @include breakpoint-up(large) {
+      font-size: rem(56px);
+      line-height: rem(56px);
+      margin-bottom: rem(24px);
     }
   }
 
@@ -34,13 +48,20 @@
     line-height: rem(26px);
     color: $darkgray;
     margin-bottom: rem(32px);
+
     @include breakpoint-up(medium) {
       margin-bottom: rem(39px);
+    }
+
+    @include breakpoint-up(large) {
+      font-size: rem(18px);
+      line-height: rem(26px);
     }
   }
 
   &__cta--orange {
     @include ctaButton($white, $orange);
+
     margin-right: rem(34px);
 
     &:hover {
@@ -50,6 +71,7 @@
 
   &__cta--transparent {
     @include ctaButton($darkgray, transparent);
+
     padding: 0 !important;
   }
 
@@ -59,15 +81,22 @@
     width: rem(372px);
     height: rem(331px);
     border-radius: 20px;
+
     @include breakpoint-up(medium) {
       background-image: url(../assets/tablet/image-keyboard.jpg);
       width: rem(478px);
       height: rem(425px);
     }
 
+    @include breakpoint-up(large) {
+      background-image: url(../assets/desktop/image-keyboard.jpg);
+      width: rem(540px);
+      height: rem(480px);
+    }
+
     @include patternSquare() {
       top: 0;
-      right: -278px;
+      right: rem(-293px);
     }
   }
 }

@@ -1,25 +1,26 @@
 @use 'breakpoints' as *;
 @use 'pxToRem' as *;
 
-// .flex {
-//   display: flex;
+.flex {
+  display: flex;
 
-//   &-jc-sb {
-//     justify-content: space-between;
-//   }
-// }
-
-.margin-vertical {
-  margin-left: rem(24px);
-  margin-right: rem(24px);
-
-  @include breakpoint-up(medium) {
-    margin-left: rem(40px);
-    margin-right: rem(40px);
+  &-jc-sb {
+    justify-content: space-between;
   }
 
-  @include breakpoint-up(large) {
-    margin-left: rem(165px);
-    margin-right: rem(165px);
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+.container {
+  max-width: rem(1189px);
+  margin: 0 auto;
+  padding-left: rem(24px);
+  padding-right: rem(24px);
+
+  @include breakpoint-up(medium) {
+    padding-left: rem(39.5px);
+    padding-right: rem(39.5px);
   }
 }
