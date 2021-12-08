@@ -6,15 +6,13 @@
   padding: $p-tb $p-lr;
   border-radius: $radius;
   font-size: rem(16px);
-  font-weight: bold;
+  font-weight: 700;
   line-height: rem(26px);
   text-transform: uppercase;
   text-decoration: none;
-}
+  display: inline-block;
 
-@mixin ctaButton-hover($color: #fff, $bg-color: $darkblue) {
-  &:hover {
-    color: $color;
-    background: $bg-color;
+  @include breakpoint-up(medium) {
+    padding: rem(16px) rem(26.5px);
   }
 }

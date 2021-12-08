@@ -1,0 +1,12 @@
+// <img src="./assets/shared/pattern-square.svg" alt="" />
+
+@mixin patternSquare {
+  &::after {
+    content: '';
+    position: absolute;
+    width: 255px;
+    height: 240px;
+    background: url(../assets/shared/pattern-square.svg);
+    @content;
+  }
+}

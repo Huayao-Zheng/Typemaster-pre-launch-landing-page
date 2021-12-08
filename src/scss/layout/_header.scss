@@ -5,19 +5,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: rem(23) rem(24) rem(64) rem(24);
-  margin: 0 auto;
+  padding: rem(23px) 0 rem(64px) 0;
 
   @include breakpoint-up(medium) {
-    padding: rem(40) rem(40) rem(62) rem(40);
+    padding: rem(40px) 0 rem(62px) 0;
   }
 
   @include breakpoint-up(large) {
-    padding: rem(55) rem(165) rem(76) rem(165);
+    padding: rem(55px) 0 rem(76px) 0;
   }
 
-  &__cta {
+  &__cta--gray {
     @include ctaButton();
-    @include ctaButton-hover();
+
+    &:hover {
+      color: $white;
+      background-color: $darkblue;
+    }
   }
 }

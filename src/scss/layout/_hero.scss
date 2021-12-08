@@ -1,0 +1,73 @@
+@use '../base' as *;
+@use '../components/button' as *;
+@use '../components/square' as *;
+
+.hero {
+  display: grid;
+  gap: rem(64px);
+  grid-template-columns: rem(339px);
+  @include breakpoint-up(medium) {
+    grid-template-columns: rem(339px) 1fr;
+    gap: rem(69px);
+  }
+
+  .left-col {
+    padding-top: rem(60px);
+  }
+  .right-col {
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: rem(48px);
+    line-height: rem(48px);
+    margin-bottom: rem(32px);
+    @include breakpoint-up(medium) {
+      margin-bottom: rem(34px);
+    }
+  }
+
+  p {
+    font-weight: 500;
+    font-size: rem(16px);
+    line-height: rem(26px);
+    color: $darkgray;
+    margin-bottom: rem(32px);
+    @include breakpoint-up(medium) {
+      margin-bottom: rem(39px);
+    }
+  }
+
+  &__cta--orange {
+    @include ctaButton($white, $orange);
+    margin-right: rem(34px);
+
+    &:hover {
+      background-color: $pink;
+    }
+  }
+
+  &__cta--transparent {
+    @include ctaButton($darkgray, transparent);
+    padding: 0 !important;
+  }
+
+  &__img {
+    position: relative;
+    background: url(../assets/mobile/image-keyboard.jpg) no-repeat center/cover;
+    width: rem(372px);
+    height: rem(331px);
+    border-radius: 20px;
+    @include breakpoint-up(medium) {
+      background-image: url(../assets/tablet/image-keyboard.jpg);
+      width: rem(478px);
+      height: rem(425px);
+    }
+
+    @include patternSquare() {
+      top: 0;
+      right: -278px;
+    }
+  }
+}

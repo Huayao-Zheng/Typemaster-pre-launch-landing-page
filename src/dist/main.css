@@ -9,7 +9,8 @@
 body,
 h1,
 h2,
-h3 p {
+h3,
+p {
   margin: 0;
 }
 
@@ -37,6 +38,25 @@ body {
   font-size: 1rem;
   font-family: "Barlow", sans-serif;
   min-height: 100vh;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.margin-vertical {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+@media (min-width: 48em) {
+  .margin-vertical {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+}
+@media (min-width: 90em) {
+  .margin-vertical {
+    margin-left: 10.3125rem;
+    margin-right: 10.3125rem;
+  }
 }
 
 .header {
@@ -49,31 +69,137 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1.4375rem 1.5rem 4rem 1.5rem;
-  margin: 0 auto;
+  padding: 1.4375rem 0 4rem 0;
 }
 @media (min-width: 48em) {
   .header {
-    padding: 2.5rem 2.5rem 3.875rem 2.5rem;
+    padding: 2.5rem 0 3.875rem 0;
   }
 }
 @media (min-width: 90em) {
   .header {
-    padding: 3.4375rem 10.3125rem 4.75rem 10.3125rem;
+    padding: 3.4375rem 0 4.75rem 0;
   }
 }
-.header__cta {
+.header__cta--gray {
   color: #162542;
   background: #e8eff2;
   padding: 0.6875rem 0.875rem;
   border-radius: 0.5rem;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.625rem;
   text-transform: uppercase;
   text-decoration: none;
+  display: inline-block;
 }
-.header__cta:hover {
-  color: #fff;
-  background: #162542;
+@media (min-width: 48em) {
+  .header__cta--gray {
+    padding: 1rem 1.65625rem;
+  }
+}
+.header__cta--gray:hover {
+  color: #ffffff;
+  background-color: #162542;
+}
+
+.hero {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 21.1875rem;
+}
+@media (min-width: 48em) {
+  .hero {
+    grid-template-columns: 21.1875rem 1fr;
+    gap: 4.3125rem;
+  }
+}
+.hero .left-col {
+  padding-top: 3.75rem;
+}
+.hero h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 48em) {
+  .hero h1 {
+    margin-bottom: 2.125rem;
+  }
+}
+.hero p {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #7b8bad;
+  margin-bottom: 2rem;
+}
+@media (min-width: 48em) {
+  .hero p {
+    margin-bottom: 2.4375rem;
+  }
+}
+.hero__cta--orange {
+  color: #ffffff;
+  background: #f16718;
+  padding: 0.6875rem 0.875rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 2.125rem;
+}
+@media (min-width: 48em) {
+  .hero__cta--orange {
+    padding: 1rem 1.65625rem;
+  }
+}
+.hero__cta--orange:hover {
+  background-color: #ff9b62;
+}
+.hero__cta--transparent {
+  color: #7b8bad;
+  background: transparent;
+  padding: 0.6875rem 0.875rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 !important;
+}
+@media (min-width: 48em) {
+  .hero__cta--transparent {
+    padding: 1rem 1.65625rem;
+  }
+}
+.hero__img {
+  position: relative;
+  background: url(../assets/mobile/image-keyboard.jpg) no-repeat center/cover;
+  width: 23.25rem;
+  height: 20.6875rem;
+  border-radius: 20px;
+}
+@media (min-width: 48em) {
+  .hero__img {
+    background-image: url(../assets/tablet/image-keyboard.jpg);
+    width: 29.875rem;
+    height: 26.5625rem;
+  }
+}
+.hero__img::after {
+  content: "";
+  position: absolute;
+  width: 255px;
+  height: 240px;
+  background: url(../assets/shared/pattern-square.svg);
+  top: 0;
+  right: -278px;
 }/*# sourceMappingURL=main.css.map */
