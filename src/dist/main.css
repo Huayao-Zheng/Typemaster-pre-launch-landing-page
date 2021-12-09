@@ -38,6 +38,7 @@ body {
   font-size: 1rem;
   font-family: "Barlow", sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .flex {
@@ -431,4 +432,95 @@ body {
   .description__body p {
     max-width: 16rem;
   }
+}
+
+.features-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+@media (min-width: 48em) {
+  .features-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-column-gap: 4.3125rem;
+       -moz-column-gap: 4.3125rem;
+            column-gap: 4.3125rem;
+    row-gap: 4.5rem;
+  }
+}
+@media (min-width: 69.375em) {
+  .features-list {
+    -webkit-column-gap: 1.875rem;
+       -moz-column-gap: 1.875rem;
+            column-gap: 1.875rem;
+  }
+}
+
+.feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+@media (min-width: 48em) {
+  .feature {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
+    -ms-flex-preferred-size: 17.5625rem;
+        flex-basis: 17.5625rem;
+  }
+}
+@media (min-width: 69.375em) {
+  .feature {
+    -ms-flex-preferred-size: 15.9375rem;
+        flex-basis: 15.9375rem;
+  }
+}
+.feature__icon-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f16718;
+  width: 4.0625rem;
+  height: 4.0625rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+.feature h3 {
+  color: #162542;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.feature p {
+  color: #7b8bad;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625rem;
 }/*# sourceMappingURL=main.css.map */

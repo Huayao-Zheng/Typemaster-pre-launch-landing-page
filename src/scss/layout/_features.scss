@@ -1,0 +1,61 @@
+@use '../base' as *;
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(64px);
+
+  @include breakpoint-up(medium) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: rem(69px);
+    row-gap: rem(72px);
+  }
+
+  @include breakpoint-up(large) {
+    column-gap: rem(30px);
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include breakpoint-up(medium) {
+    align-items: flex-start;
+    text-align: left;
+    flex-basis: rem(281px);
+  }
+
+  @include breakpoint-up(large) {
+    flex-basis: rem(255px);
+  }
+
+  &__icon-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $orange;
+    width: rem(65px);
+    height: rem(65px);
+    border-radius: rem(16px);
+    margin-bottom: rem(48px);
+  }
+
+  h3 {
+    color: $darkblue;
+    font-weight: 900;
+    font-size: rem(24px);
+    line-height: rem(28px);
+    margin-bottom: rem(24px);
+  }
+
+  p {
+    color: $darkgray;
+    font-weight: 500;
+    font-size: rem(16px);
+    line-height: rem(26px);
+  }
+}
