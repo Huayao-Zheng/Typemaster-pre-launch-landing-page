@@ -1,0 +1,156 @@
+@use '../base' as *;
+@use '../components/square' as *;
+
+.description {
+  margin-bottom: rem(111px);
+  margin-right: rem(24px);
+
+  @include breakpoint-up(medium) {
+    margin-right: rem(40px);
+  }
+
+  @include breakpoint-up(large) {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__imgs-container {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: rem(75px);
+    height: rem(193px);
+
+    @include breakpoint-up(medium) {
+      height: rem(320px);
+    }
+    @include breakpoint-up(large) {
+      height: rem(480px);
+    }
+  }
+
+  &__img-phone {
+    //orange overlay
+    display: inline-block;
+    position: relative;
+    background-color: $orange;
+    width: rem(129px);
+    height: 100%;
+    border-radius: rem(20px);
+    transform: translateX(-24px);
+
+    @include breakpoint-up(medium) {
+      width: rem(214px);
+
+      transform: translateX(-30px);
+    }
+
+    @include breakpoint-up(large) {
+      width: rem(255px);
+    }
+
+    //img-phone img
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url(../assets/mobile/image-phone-and-keyboard.jpg) no-repeat center/cover;
+      width: 100%;
+      height: 100%;
+      opacity: 0.75;
+      mix-blend-mode: multiply;
+      border-radius: rem(20px);
+
+      @include breakpoint-up(medium) {
+        background-image: url(../assets/tablet/image-phone-and-keyboard.jpg);
+      }
+
+      @include breakpoint-up(large) {
+        background-image: url(../assets/desktop/image-phone-and-keyboard.jpg);
+      }
+    }
+
+    @include patternSquare() {
+      top: 0;
+      left: -285px;
+      @include breakpoint-up(medium) {
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__img-glass {
+    display: inline-block;
+    background: url(../assets/mobile/image-glass-and-keyboard.jpg) no-repeat center/cover;
+    width: rem(220px);
+    height: 100%;
+    border-radius: rem(20px);
+
+    @include breakpoint-up(medium) {
+      background-image: url(../assets/tablet/image-glass-and-keyboard.jpg);
+      width: rem(445px);
+    }
+
+    @include breakpoint-up(large) {
+      background-image: url(../assets/desktop/image-glass-and-keyboard.jpg);
+    }
+  }
+
+  &__body {
+    text-align: center;
+    margin-left: rem(24px);
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      margin-left: rem(39.5px);
+    }
+
+    @include breakpoint-up(large) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: rem(125px);
+      margin-right: auto;
+    }
+
+    h2 {
+      font-weight: 900;
+      font-size: rem(32px);
+      line-height: rem(36px);
+      color: $darkblue;
+      text-transform: uppercase;
+      margin-bottom: rem(24px);
+
+      @include breakpoint-up(medium) {
+        margin-bottom: 0;
+        max-width: rem(255px);
+      }
+
+      @include breakpoint-up(large) {
+        margin-bottom: rem(27px);
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: rem(16px);
+      line-height: rem(26px);
+      color: $darkgray;
+
+      @include breakpoint-up(medium) {
+        max-width: rem(398px);
+      }
+
+      @include breakpoint-up(large) {
+        max-width: rem(256px);
+      }
+    }
+  }
+}

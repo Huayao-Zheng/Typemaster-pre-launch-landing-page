@@ -80,7 +80,7 @@
     background: url(../assets/mobile/image-keyboard.jpg) no-repeat center/cover;
     width: rem(372px);
     height: rem(331px);
-    border-radius: 20px;
+    border-radius: rem(20px);
 
     @include breakpoint-up(medium) {
       background-image: url(../assets/tablet/image-keyboard.jpg);

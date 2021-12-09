@@ -216,7 +216,7 @@ body {
   background: url(../assets/mobile/image-keyboard.jpg) no-repeat center/cover;
   width: 23.25rem;
   height: 20.6875rem;
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 @media (min-width: 48em) {
   .hero__img {
@@ -240,4 +240,195 @@ body {
   background: url(../assets/shared/pattern-square.svg);
   top: 0;
   right: -18.3125rem;
+}
+
+.description {
+  margin-bottom: 6.9375rem;
+  margin-right: 1.5rem;
+}
+@media (min-width: 48em) {
+  .description {
+    margin-right: 2.5rem;
+  }
+}
+@media (min-width: 69.375em) {
+  .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.description__imgs-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-bottom: 4.6875rem;
+  height: 12.0625rem;
+}
+@media (min-width: 48em) {
+  .description__imgs-container {
+    height: 20rem;
+  }
+}
+@media (min-width: 69.375em) {
+  .description__imgs-container {
+    height: 30rem;
+  }
+}
+.description__img-phone {
+  display: inline-block;
+  position: relative;
+  background-color: #f16718;
+  width: 8.0625rem;
+  height: 100%;
+  border-radius: 1.25rem;
+  -webkit-transform: translateX(-24px);
+          transform: translateX(-24px);
+}
+@media (min-width: 48em) {
+  .description__img-phone {
+    width: 13.375rem;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+}
+@media (min-width: 69.375em) {
+  .description__img-phone {
+    width: 15.9375rem;
+  }
+}
+.description__img-phone::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(../assets/mobile/image-phone-and-keyboard.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+  border-radius: 1.25rem;
+}
+@media (min-width: 48em) {
+  .description__img-phone::before {
+    background-image: url(../assets/tablet/image-phone-and-keyboard.jpg);
+  }
+}
+@media (min-width: 69.375em) {
+  .description__img-phone::before {
+    background-image: url(../assets/desktop/image-phone-and-keyboard.jpg);
+  }
+}
+.description__img-phone::after {
+  content: "";
+  position: absolute;
+  width: 255px;
+  height: 240px;
+  background: url(../assets/shared/pattern-square.svg);
+  top: 0;
+  left: -285px;
+}
+@media (min-width: 48em) {
+  .description__img-phone::after {
+    top: auto;
+    bottom: 0;
+  }
+}
+.description__img-glass {
+  display: inline-block;
+  background: url(../assets/mobile/image-glass-and-keyboard.jpg) no-repeat center/cover;
+  width: 13.75rem;
+  height: 100%;
+  border-radius: 1.25rem;
+}
+@media (min-width: 48em) {
+  .description__img-glass {
+    background-image: url(../assets/tablet/image-glass-and-keyboard.jpg);
+    width: 27.8125rem;
+  }
+}
+@media (min-width: 69.375em) {
+  .description__img-glass {
+    background-image: url(../assets/desktop/image-glass-and-keyboard.jpg);
+  }
+}
+.description__body {
+  text-align: center;
+  margin-left: 1.5rem;
+}
+@media (min-width: 48em) {
+  .description__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+    margin-left: 2.46875rem;
+  }
+}
+@media (min-width: 69.375em) {
+  .description__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: 7.8125rem;
+    margin-right: auto;
+  }
+}
+.description__body h2 {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  color: #162542;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 48em) {
+  .description__body h2 {
+    margin-bottom: 0;
+    max-width: 15.9375rem;
+  }
+}
+@media (min-width: 69.375em) {
+  .description__body h2 {
+    margin-bottom: 1.6875rem;
+  }
+}
+.description__body p {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #7b8bad;
+}
+@media (min-width: 48em) {
+  .description__body p {
+    max-width: 24.875rem;
+  }
+}
+@media (min-width: 69.375em) {
+  .description__body p {
+    max-width: 16rem;
+  }
 }/*# sourceMappingURL=main.css.map */
