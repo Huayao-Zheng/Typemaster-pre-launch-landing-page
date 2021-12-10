@@ -3,13 +3,13 @@
 footer {
   text-align: center;
   color: $darkgray;
-  padding: rem(96px) 0 rem(50px) 0;
+  position: absolute;
+  width: 100%;
+  bottom: rem(39px);
+  line-height: rem(27px);
 
-  @include breakpoint-up(medium) {
-    padding: rem(142px) 0 rem(43px) 0;
-  }
-
-  @include breakpoint-up(large) {
-    padding: rem(128px) 0 rem(39px) 0;
+  a {
+    color: $pink;
+    font-weight: bold;
   }
 }
