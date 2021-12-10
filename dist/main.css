@@ -213,6 +213,9 @@ body {
     padding: 1rem 1.65625rem;
   }
 }
+.hero .right-col {
+  overflow: hidden;
+}
 .hero__img {
   position: relative;
   background: url(../assets/mobile/image-keyboard.jpg) no-repeat center/cover;
