@@ -18,7 +18,7 @@ Users should be able to:
 ### Links
 
 - [Live](https://lonelybuddy.github.io/Typemaster-pre-launch-landing-page/)
-- [Solution]()
+- [Solution](https://www.frontendmentor.io/solutions/htmlscss-ujBDfiSpF)
 
 ### Built with
 
